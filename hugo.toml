@@ -5,7 +5,7 @@ theme = 'PaperMod'
 
 [params]
   author = 'Gavin Rouse'
-  description = 'CEO, developer, political operative. Building systems and businesses.'
+  description = 'Software Test Engineer. Political operative. Systems builder. Based in Pasco, Washington.'
   keywords = ['Gavin Rouse', 'developer', 'politics', 'automation', 'Franklin County GOP']
   defaultTheme = 'auto'
   disableThemeToggle = false
@@ -57,6 +57,9 @@ theme = 'PaperMod'
   [[params.socialIcons]]
     name = 'email'
     url = 'mailto:gavin@gavinrouse.com'
+  [[params.socialIcons]]
+    name = 'youtube'
+    url = 'https://www.youtube.com/@gavinrouse'
   [[params.socialIcons]]
     name = 'rss'
     url = 'index.xml'

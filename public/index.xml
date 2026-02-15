@@ -1,1 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Gavin Rouse</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/</link><description>Recent content on Gavin Rouse</description><generator>Hugo -- 0.146.6</generator><language>en-us</language><lastBuildDate/><atom:link href="https://franklinclawdbot.github.io/websites/gavinrouse/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Gavin Rouse</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/</link><description>Recent content on Gavin Rouse</description><generator>Hugo -- 0.146.6</generator><language>en-us</language><lastBuildDate>Sat, 14 Feb 2026 21:30:00 -0800</lastBuildDate><atom:link href="https://franklinclawdbot.github.io/websites/gavinrouse/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/about/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/about/</guid><description>&lt;p>I&amp;rsquo;m Gavin Rouse — a software test engineer, political operative, and systems builder based in Pasco, Washington.&lt;/p>
+&lt;h2 id="experience">Experience&lt;/h2>
+&lt;h3 id="software-test-engineer-i">Software Test Engineer I&lt;/h3>
+&lt;p>&lt;strong>Cadwell Laboratories, Inc.&lt;/strong> — July 2017 - Present&lt;/p>
+&lt;p>Developing and testing electroencephalogram (EEG) software used by medical professionals worldwide to treat brain disorders, particularly epilepsy.&lt;/p>
+&lt;ul>
+&lt;li>Lead testing for major, minor, and limited software releases&lt;/li>
+&lt;li>Design, document, execute, and maintain test plans and test cases&lt;/li>
+&lt;li>Build and manage test automation frameworks (C#, Visual Studio, Azure DevOps)&lt;/li>
+&lt;li>Two awards for exhibiting Cadwell&amp;rsquo;s core values&lt;/li>
+&lt;li>Mentor and onboard interns&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Technologies:&lt;/strong> C#, Microsoft Visual Studio, Microsoft Test Manager, Team Foundation Server, Azure DevOps, Git&lt;/p></description></item><item><title>Now</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/now/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/now/</guid><description>&lt;p>What I&amp;rsquo;m focused on right now. (Last updated: February 14, 2026)&lt;/p>
+&lt;h2 id="currently-building">Currently Building&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Treasurer automation&lt;/strong> for Franklin County GOP — designing database schema and webhook integrations&lt;/li>
+&lt;li>&lt;strong>Personal website&lt;/strong> — launching gavinrouse.com as central hub&lt;/li>
+&lt;li>&lt;strong>AI employee systems&lt;/strong> — refining how I work with AI agents across all projects&lt;/li>
+&lt;/ul>
+&lt;h2 id="currently-learning">Currently Learning&lt;/h2>
+&lt;ul>
+&lt;li>Washington PDC compliance requirements&lt;/li>
+&lt;li>GiveButter API and webhook architecture&lt;/li>
+&lt;li>Hugo static site generation&lt;/li>
+&lt;li>Event planning at scale with limited resources&lt;/li>
+&lt;/ul>
+&lt;h2 id="currently-reading">Currently Reading&lt;/h2>
+&lt;p>[Add books, articles, papers you&amp;rsquo;re reading]&lt;/p></description></item><item><title>Projects</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/projects/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/projects/</guid><description>&lt;p>Active projects and experiments. Always building.&lt;/p>
+&lt;hr>
+&lt;h2 id="professional-work">Professional Work&lt;/h2>
+&lt;h3 id="eeg-software-testing-platform">EEG Software Testing Platform&lt;/h3>
+&lt;p>&lt;strong>Cadwell Laboratories&lt;/strong> | Production System&lt;/p>
+&lt;p>Comprehensive test automation and quality assurance for neurodiagnostic software used in hospitals worldwide.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Impact:&lt;/strong> Software monitors electrical brain activity for epilepsy diagnosis and treatment&lt;/li>
+&lt;li>&lt;strong>Scale:&lt;/strong> Used by medical professionals across 50+ countries&lt;/li>
+&lt;li>&lt;strong>Challenge:&lt;/strong> Ensuring FDA compliance and patient safety in regulated medical device environment&lt;/li>
+&lt;li>&lt;strong>Result:&lt;/strong> Zero critical defects in production releases under my test leadership&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Stack:&lt;/strong> C#, Visual Studio, Azure DevOps, TFS, Microsoft Test Manager&lt;br>
+&lt;strong>Role:&lt;/strong> Test Lead, Automation Engineer&lt;/p></description></item><item><title>Videos</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/videos/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/videos/</guid><description>&lt;h2 id="youtube-channel">YouTube Channel&lt;/h2>
+&lt;p>I create videos about technology, automation, and behind-the-scenes looks at projects I&amp;rsquo;m working on.&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://www.youtube.com/@gavinrouse">Subscribe on YouTube&lt;/a>&lt;/strong>&lt;/p>
+&lt;h3 id="what-to-expect">What to Expect&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Project deep-dives&lt;/strong> — Walkthroughs of systems I&amp;rsquo;m building&lt;/li>
+&lt;li>&lt;strong>Automation tutorials&lt;/strong> — How to eliminate repetitive tasks&lt;/li>
+&lt;li>&lt;strong>Political tech&lt;/strong> — Modernizing grassroots operations&lt;/li>
+&lt;li>&lt;strong>Videography experiments&lt;/strong> — Because creating things is fun&lt;/li>
+&lt;/ul>
+&lt;h3 id="latest-videos">Latest Videos&lt;/h3>
+&lt;p>&lt;em>[Video feed will appear here once channel content is curated]&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h3 id="other-platforms">Other Platforms&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Twitter/X:&lt;/strong> &lt;a href="https://twitter.com/gavinrouse">@gavinrouse&lt;/a> — Quick thoughts, project updates&lt;/li>
+&lt;li>&lt;strong>GitHub:&lt;/strong> &lt;a href="https://github.com/gavinrouse">github.com/gavinrouse&lt;/a> — Code and project repos&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;em>Have a video topic suggestion? &lt;a href="mailto:gavin@gavinrouse.com">Email me&lt;/a>.&lt;/em>&lt;/p></description></item></channel></rss>
