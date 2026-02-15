@@ -1,0 +1,66 @@
+baseURL = 'https://franklinclawdbot.github.io/homedefensespears'
+languageCode = 'en-us'
+title = 'Home Defense Spears'
+theme = 'PaperMod'
+
+[params]
+  author = 'Home Defense Spears'
+  description = 'Medieval wisdom for modern threats. Practical home security with a historical twist.'
+  keywords = ['home security', 'home defense', 'castle doctrine', 'medieval defense', 'security systems']
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+
+  [params.profileMode]
+    enabled = true
+    title = 'Home Defense Spears'
+    subtitle = 'Medieval wisdom for modern threats. Practical home security with a historical twist.'
+    
+    [[params.profileMode.buttons]]
+      name = 'Articles'
+      url = '/articles'
+    [[params.profileMode.buttons]]
+      name = 'Reviews'
+      url = '/reviews'
+    [[params.profileMode.buttons]]
+      name = 'About'
+      url = '/about'
+
+  [[params.socialIcons]]
+    name = 'twitter'
+    url = 'https://twitter.com/homedefensespears'
+  [[params.socialIcons]]
+    name = 'rss'
+    url = 'index.xml'
+
+[menu]
+  [[menu.main]]
+    identifier = 'articles'
+    name = 'Articles'
+    url = '/articles/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'reviews'
+    name = 'Reviews'
+    url = '/reviews/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 30
+  [[menu.main]]
+    identifier = 'newsletter'
+    name = 'Newsletter'
+    url = '/newsletter/'
+    weight = 40
+
+# Affiliate disclosure
+[params.footer]
+  customText = "This site contains affiliate links. We may earn a commission if you purchase through these links, at no extra cost to you."
