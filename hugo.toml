@@ -5,7 +5,7 @@ theme = 'PaperMod'
 
 [params]
   author = 'Gavin Rouse'
-  description = 'Software Test Engineer. Political operative. Systems builder. Based in Pasco, Washington.'
+  description = 'Product Quality Test Lead at Cadwell. Modern Renaissance Man. Software quality, political operations, videography. Based in Pasco, Washington.'
   keywords = ['Gavin Rouse', 'developer', 'politics', 'automation', 'Franklin County GOP']
   defaultTheme = 'auto'
   disableThemeToggle = false
@@ -28,7 +28,7 @@ theme = 'PaperMod'
   [params.profileMode]
     enabled = true
     title = 'Gavin Rouse'
-    subtitle = 'Building systems. Running operations. Making things work.'
+    subtitle = 'Product Quality Test Lead. Modern Renaissance Man. Skilled in many, bound by none.'
     imageUrl = ''
     imageTitle = ''
     imageWidth = 150
@@ -60,6 +60,9 @@ theme = 'PaperMod'
   [[params.socialIcons]]
     name = 'youtube'
     url = 'https://www.youtube.com/@gavinrouse'
+  [[params.socialIcons]]
+    name = 'instagram'
+    url = 'https://instagram.com/_gavin_rouse_'
   [[params.socialIcons]]
     name = 'rss'
     url = 'index.xml'

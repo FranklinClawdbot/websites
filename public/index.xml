@@ -1,16 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Gavin Rouse</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/</link><description>Recent content on Gavin Rouse</description><generator>Hugo -- 0.146.6</generator><language>en-us</language><lastBuildDate>Sat, 14 Feb 2026 21:30:00 -0800</lastBuildDate><atom:link href="https://franklinclawdbot.github.io/websites/gavinrouse/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/about/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/about/</guid><description>&lt;p>I&amp;rsquo;m Gavin Rouse — a software test engineer, political operative, and systems builder based in Pasco, Washington.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Gavin Rouse</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/</link><description>Recent content on Gavin Rouse</description><generator>Hugo -- 0.146.6</generator><language>en-us</language><lastBuildDate>Sat, 14 Feb 2026 21:30:00 -0800</lastBuildDate><atom:link href="https://franklinclawdbot.github.io/websites/gavinrouse/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/about/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/about/</guid><description>&lt;p>I&amp;rsquo;m Gavin Rouse — a software quality leader, political operative, and modern renaissance man based in Pasco, Washington.&lt;/p>
+&lt;p>&lt;strong>&amp;ldquo;Skilled in many, bound by none. A life of exploration, capability, and freedom.&amp;rdquo;&lt;/strong>&lt;/p>
 &lt;h2 id="experience">Experience&lt;/h2>
-&lt;h3 id="software-test-engineer-i">Software Test Engineer I&lt;/h3>
-&lt;p>&lt;strong>Cadwell Laboratories, Inc.&lt;/strong> — July 2017 - Present&lt;/p>
-&lt;p>Developing and testing electroencephalogram (EEG) software used by medical professionals worldwide to treat brain disorders, particularly epilepsy.&lt;/p>
-&lt;ul>
-&lt;li>Lead testing for major, minor, and limited software releases&lt;/li>
-&lt;li>Design, document, execute, and maintain test plans and test cases&lt;/li>
-&lt;li>Build and manage test automation frameworks (C#, Visual Studio, Azure DevOps)&lt;/li>
-&lt;li>Two awards for exhibiting Cadwell&amp;rsquo;s core values&lt;/li>
-&lt;li>Mentor and onboard interns&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Technologies:&lt;/strong> C#, Microsoft Visual Studio, Microsoft Test Manager, Team Foundation Server, Azure DevOps, Git&lt;/p></description></item><item><title>Now</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/now/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/now/</guid><description>&lt;p>What I&amp;rsquo;m focused on right now. (Last updated: February 14, 2026)&lt;/p>
+&lt;h3 id="product-quality-test-lead">Product Quality Test Lead&lt;/h3>
+&lt;p>&lt;strong>Cadwell Laboratories, Inc.&lt;/strong> — July 2025 - Present (8 months)&lt;/p>
+&lt;p>Leading the technical strategy, execution, and infrastructure of product quality across Cadwell&amp;rsquo;s neurodiagnostic product lines. Championing systems-thinking approach to quality—delivering tools, processes, and insights that reduce risk and increase confidence.&lt;/p></description></item><item><title>Now</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/now/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/now/</guid><description>&lt;p>What I&amp;rsquo;m focused on right now. (Last updated: February 14, 2026)&lt;/p>
 &lt;h2 id="currently-building">Currently Building&lt;/h2>
 &lt;ul>
 &lt;li>&lt;strong>Treasurer automation&lt;/strong> for Franklin County GOP — designing database schema and webhook integrations&lt;/li>
@@ -38,23 +31,50 @@
 &lt;li>&lt;strong>Result:&lt;/strong> Zero critical defects in production releases under my test leadership&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Stack:&lt;/strong> C#, Visual Studio, Azure DevOps, TFS, Microsoft Test Manager&lt;br>
-&lt;strong>Role:&lt;/strong> Test Lead, Automation Engineer&lt;/p></description></item><item><title>Videos</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/videos/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/videos/</guid><description>&lt;h2 id="youtube-channel">YouTube Channel&lt;/h2>
-&lt;p>I create videos about technology, automation, and behind-the-scenes looks at projects I&amp;rsquo;m working on.&lt;/p>
-&lt;p>&lt;strong>&lt;a href="https://www.youtube.com/@gavinrouse">Subscribe on YouTube&lt;/a>&lt;/strong>&lt;/p>
-&lt;h3 id="what-to-expect">What to Expect&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Project deep-dives&lt;/strong> — Walkthroughs of systems I&amp;rsquo;m building&lt;/li>
-&lt;li>&lt;strong>Automation tutorials&lt;/strong> — How to eliminate repetitive tasks&lt;/li>
-&lt;li>&lt;strong>Political tech&lt;/strong> — Modernizing grassroots operations&lt;/li>
-&lt;li>&lt;strong>Videography experiments&lt;/strong> — Because creating things is fun&lt;/li>
-&lt;/ul>
-&lt;h3 id="latest-videos">Latest Videos&lt;/h3>
-&lt;p>&lt;em>[Video feed will appear here once channel content is curated]&lt;/em>&lt;/p>
+&lt;strong>Role:&lt;/strong> Test Lead, Automation Engineer&lt;/p></description></item><item><title>Videos</title><link>https://franklinclawdbot.github.io/websites/gavinrouse/videos/</link><pubDate>Sat, 14 Feb 2026 21:30:00 -0800</pubDate><guid>https://franklinclawdbot.github.io/websites/gavinrouse/videos/</guid><description>&lt;h1 id="videography">Videography&lt;/h1>
+&lt;p>&lt;strong>Modern Renaissance Man&lt;/strong> — &lt;em>Where curiosity leads, the camera follows.&lt;/em>&lt;/p>
+&lt;p>I create cinematic content around hunting, outdoor adventures, and life events. 301 subscribers, 49 videos, and counting.&lt;/p>
+&lt;p>&lt;a href="https://youtube.com/@gavinrouse">Visit my YouTube channel →&lt;/a>
+&lt;a href="https://instagram.com/_gavin_rouse_">Follow on Instagram →&lt;/a>&lt;/p>
 &lt;hr>
-&lt;h3 id="other-platforms">Other Platforms&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Twitter/X:&lt;/strong> &lt;a href="https://twitter.com/gavinrouse">@gavinrouse&lt;/a> — Quick thoughts, project updates&lt;/li>
-&lt;li>&lt;strong>GitHub:&lt;/strong> &lt;a href="https://github.com/gavinrouse">github.com/gavinrouse&lt;/a> — Code and project repos&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;p>&lt;em>Have a video topic suggestion? &lt;a href="mailto:gavin@gavinrouse.com">Email me&lt;/a>.&lt;/em>&lt;/p></description></item></channel></rss>
+&lt;h2 id="featured-content">Featured Content&lt;/h2>
+&lt;h3 id="hunting-cinematography">Hunting Cinematography&lt;/h3>
+&lt;p>My passion project — documenting archery elk hunts, deer hunting, and outdoor adventures with cinematic storytelling.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Video&lt;/th>
+&lt;th>Views&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Crescent Bar, WA&lt;/strong>&lt;/td>
+&lt;td>42K views&lt;/td>
+&lt;td>Summer adventure and exploration&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Bonzai Buck Hunt&lt;/strong>&lt;/td>
+&lt;td>33K views&lt;/td>
+&lt;td>Entiat Mountains, WA deer hunt&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>2023 Oregon Archery Elk Hunt&lt;/strong>&lt;/td>
+&lt;td>22K views&lt;/td>
+&lt;td>30-minute elk hunt documentary&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>The Primal Connection&lt;/strong>&lt;/td>
+&lt;td>451 views&lt;/td>
+&lt;td>2023 Oregon Archery Elk Hunt extended cut&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>High Hopes: An Elk Hunt in Montana&lt;/strong>&lt;/td>
+&lt;td>2.7K views&lt;/td>
+&lt;td>Montana elk hunting adventure&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="life-events">Life Events&lt;/h3>
+&lt;p>Professional event videography for weddings and special occasions.&lt;/p></description></item></channel></rss>
