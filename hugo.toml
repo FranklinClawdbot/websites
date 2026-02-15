@@ -28,7 +28,7 @@ theme = 'PaperMod'
   [params.profileMode]
     enabled = true
     title = 'Gavin Rouse'
-    subtitle = 'Product Quality Test Lead. Modern Renaissance Man. Skilled in many, bound by none.'
+    subtitle = 'Engineer by trade. Always learning. Always building. Forever free.'
     imageUrl = ''
     imageTitle = ''
     imageWidth = 150
