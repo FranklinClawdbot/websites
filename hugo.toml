@@ -5,32 +5,24 @@ theme = 'PaperMod'
 
 [params]
   author = 'Home Defense Spears'
-  description = 'Medieval wisdom for modern threats. Practical home security with a historical twist.'
-  keywords = ['home security', 'home defense', 'castle doctrine', 'medieval defense', 'security systems']
+  description = 'Real spears for home defense. Medieval design, modern effectiveness. Shop Cold Steel Assegai and Boar Spears.'
+  keywords = ['home security', 'home defense', 'spear', 'cold steel', 'assegai', 'medieval defense']
   defaultTheme = 'auto'
-  ShowReadingTime = true
+  ShowReadingTime = false
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = false
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = false
+  UseHugoToc = false
 
   [params.profileMode]
-    enabled = true
-    title = 'Home Defense Spears'
-    subtitle = 'Medieval wisdom for modern threats. Practical home security with a historical twist.'
-    
-    [[params.profileMode.buttons]]
-      name = 'Articles'
-      url = '/articles'
-    [[params.profileMode.buttons]]
-      name = 'Reviews'
-      url = '/reviews'
-    [[params.profileMode.buttons]]
-      name = 'About'
-      url = '/about'
+    enabled = false
+  
+  [params.homeInfoParams]
+    Title = "Home Defense Spears"
+    Content = ""
 
   [[params.socialIcons]]
     name = 'twitter'
@@ -41,24 +33,24 @@ theme = 'PaperMod'
 
 [menu]
   [[menu.main]]
-    identifier = 'articles'
-    name = 'Articles'
-    url = '/articles/'
+    identifier = 'shop'
+    name = 'Shop'
+    url = '/spears/'
     weight = 10
   [[menu.main]]
-    identifier = 'reviews'
-    name = 'Reviews'
-    url = '/reviews/'
+    identifier = 'why'
+    name = 'Why Spears?'
+    url = '/why-spears/'
     weight = 20
+  [[menu.main]]
+    identifier = 'articles'
+    name = 'Guide'
+    url = '/articles/'
+    weight = 30
   [[menu.main]]
     identifier = 'about'
     name = 'About'
     url = '/about/'
-    weight = 30
-  [[menu.main]]
-    identifier = 'newsletter'
-    name = 'Newsletter'
-    url = '/newsletter/'
     weight = 40
 
 # Affiliate disclosure
