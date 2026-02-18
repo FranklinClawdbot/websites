@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gavin Rouse — Precinct 53 PCO</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: #fafafa;
+            --text: #1a1a1a;
+            --accent: #c41e3a;
+            --muted: #666;
+            --border: #e5e5e5;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 2px solid var(--text);
+            margin-bottom: 2rem;
+        }
+        
+        .precinct-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.35rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.125rem;
+            color: var(--muted);
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .newsletter-box {
+            background: var(--text);
+            color: white;
+            padding: 2rem;
+            margin: 2.5rem 0;
+        }
+        
+        .newsletter-box h2 {
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+        
+        .newsletter-box p {
+            color: #aaa;
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+        }
+        
+        .email-form {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .email-form input[type="email"] {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.875rem 1rem;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .email-form button {
+            padding: 0.875rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .ghost-note {
+            font-size: 0.75rem;
+            color: #777;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+        
+        .values-list {
+            list-style: none;
+        }
+        
+        .values-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .values-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .values-list strong {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        
+        .values-list span {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+        
+        .election-alert {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .election-alert strong {
+            color: #92400e;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.1rem;
+        }
+        
+        .contact-links a:hover {
+            color: var(--accent);
+        }
+        
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 2px solid var(--text);
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="precinct-badge">Precinct 53 • Franklin County</div>
+            <h1>Gavin Rouse for PCO</h1>
+            <p class="tagline">Your neighbor. Your voice. Your precinct.</p>
+        </header>
+
+        <div class="election-alert">
+            <strong>📋 PCO Election Registration:</strong> Opens later this year. Join the Precinct 53 newsletter to stay informed about the process and how to participate in the May election.
+        </div>
+
+        <section class="newsletter-box">
+            <h2>Stay in the Loop</h2>
+            <p>Local politics isn't a spectator sport. Get updates on what's happening in Precinct 53—voter information, community events, and straight talk about the issues that affect us. No spam, no noise.</p>
+            <form class="email-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:#4ade80;margin:0\'>Thanks! Check your inbox.</p>';">
+                <input type="email" placeholder="you@example.com" required>
+                <button type="submit">Join Newsletter</button>
+            </form>
+            <p class="ghost-note">Powered by Ghost • Launching soon</p>
+        </section>
+
+        <section>
+            <h2>What's a PCO Anyway?</h2>
+            <p>A Precinct Committee Officer is your direct line to the Republican Party. I represent our neighborhood at county meetings, help get out the vote, and make sure your concerns are heard where decisions get made.</p>
+            <p>It's not about power—it's about <em>presence</em>. Having someone who lives here, knows the issues, and actually shows up.</p>
+        </section>
+
+        <section>
+            <h2>What I Care About</h2>
+            <ul class="values-list">
+                <li>
+                    <strong>Straight Talk</strong>
+                    <span>No sugarcoating. If I don't know something, I'll say so. If I disagree with party leadership, you'll know that too.</span>
+                </li>
+                <li>
+                    <strong>Local First</strong>
+                    <span>Communities work best when people know their neighbors. I'm here to help precinct residents connect and collaborate.</span>
+                </li>
+                <li>
+                    <strong>Fiscal Sanity</strong>
+                    <span>Government should live within its means. Lower taxes, smarter spending, and accountability for every dollar.</span>
+                </li>
+                <li>
+                    <strong>Personal Freedom</strong>
+                    <span>Your life, your choices. Limited government means keeping bureaucrats out of decisions that belong to families and individuals.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Get in Touch</h2>
+            <p>Got a question about Precinct 53? Want to know more about the PCO role? Just want to say hi? I'm around.</p>
+            <div class="contact-links">
+                <a href="mailto:gavin@gavinrouse.com">Email</a>
+                <a href="https://t.me/gavinrouse">Telegram</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>Paid for by Gavin Rouse • Precinct 53, Franklin County, WA</p>
+        </footer>
+    </div>
+</body>
+</html>
