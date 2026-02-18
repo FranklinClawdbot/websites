@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rouse House — Gavin Rouse</title>
+    <meta name="description" content="Engineer by trade. Builder by nature. I build, I grow, I lead, I serve. Old truths, new tools.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0b;
+            --bg-elevated: #111113;
+            --bg-card: #16161a;
+            --text-primary: #e8e6e3;
+            --text-secondary: #94918a;
+            --text-tertiary: #5a5750;
+            --accent: #c9a84c;
+            --accent-dim: rgba(201, 168, 76, 0.15);
+            --accent-glow: rgba(201, 168, 76, 0.08);
+            --border: #222220;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'DM Sans', -apple-system, sans-serif;
+        }
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-monogram {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, #8a6d2a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--bg);
+            letter-spacing: -0.03em;
+            box-shadow: 0 0 40px var(--accent-glow), 0 4px 20px rgba(0,0,0,0.4);
+        }
+        
+        .hero-tagline {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            line-height: 1.1;
+        }
+        
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-location {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+        
+        /* Sites Section */
+        .sites {
+            flex: 1;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .sites-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .site-card {
+            display: block;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .site-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .site-card:hover {
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .site-card:hover::before {
+            opacity: 1;
+        }
+        
+        .site-card.primary {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(201, 168, 76, 0.05) 100%);
+            border-color: rgba(201, 168, 76, 0.2);
+        }
+        
+        .site-card.primary:hover {
+            border-color: rgba(201, 168, 76, 0.4);
+        }
+        
+        .site-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .site-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+        
+        .site-title {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .site-url {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .site-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .site-arrow {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-tertiary);
+            font-size: 1.2rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+        
+        .site-card:hover .site-arrow {
+            color: var(--accent);
+            transform: translateY(-50%) translateX(4px);
+        }
+        
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            margin-left: auto;
+        }
+        
+        .badge-primary {
+            color: var(--accent);
+            background: var(--accent-dim);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        
+        footer p {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+        }
+        
+        footer .tagline {
+            font-family: var(--serif);
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+            
+            .sites {
+                padding: 1.5rem;
+            }
+            
+            .site-card {
+                padding: 1.25rem;
+            }
+            
+            .site-arrow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-monogram">GR</div>
+        <p class="hero-tagline">Old truths, new tools</p>
+        <h1>Engineer by trade.<br><em>Builder</em> by nature.</h1>
+        <p class="hero-subtitle">I build, I grow, I lead, I serve.<br>I refuse to be one thing.</p>
+        <p class="hero-location">Pasco, Washington</p>
+    </section>
+    
+    <section class="sites">
+        <div class="sites-grid">
+            <a href="./gavinrouse/" class="site-card primary">
+                <div class="site-header">
+                    <div class="site-icon">GR</div>
+                    <div class="site-title">gavinrouse.com</div>
+                    <span class="badge badge-primary">Main</span>
+                </div>
+                <div class="site-url">Personal & Professional Hub</div>
+                <div class="site-desc">The Rouse House — essays, videos, and projects. Software quality, political tech, videography, and building a self-directed life.</div>
+                <span class="site-arrow">&rarr;</span>
+            </a>
+            
+            <a href="./homedefensespears/" class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">HS</div>
+                    <div class="site-title">homedefensespears.com</div>
+                </div>
+                <div class="site-url">Medieval Wisdom, Modern Threats</div>
+                <div class="site-desc">Home defense spears — medieval castle defense applied to modern security. Information, recommendations, and affiliate content.</div>
+                <span class="site-arrow">&rarr;</span>
+            </a>
+            
+            <a href="./redmtconcepts/" class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">RM</div>
+                    <div class="site-title">redmtconcepts.com</div>
+                </div>
+                <div class="site-url">Fishing & Outdoor Gear</div>
+                <div class="site-desc">Red Mountain Concepts — fishing gear and outdoor equipment sewn in the USA. Quality craftsmanship for serious outdoorsmen.</div>
+                <span class="site-arrow">&rarr;</span>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <p class="tagline">Old truths, new tools.</p>
+        <p>&copy; 2026 Gavin Rouse — Pasco, Washington</p>
+    </footer>
+</body>
+</html>
