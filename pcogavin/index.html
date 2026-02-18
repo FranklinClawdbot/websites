@@ -3,255 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gavin Rouse — Precinct 53 PCO</title>
+    <title>Gavin Rouse — Republican PCO, Precinct 53</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
-            --bg: #fafafa;
-            --text: #1a1a1a;
-            --accent: #c41e3a;
-            --muted: #666;
-            --border: #e5e5e5;
+            --bg: #0a0a0b;
+            --bg-elevated: #111113;
+            --bg-card: #16161a;
+            --text: #e8e6e3;
+            --text-muted: #94918a;
+            --red: #dc2626;
+            --red-dark: #991b1b;
+            --gold: #c9a84c;
+            --white: #ffffff;
         }
         
         body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
+            font-family: 'Inter', system-ui, sans-serif;
             background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
         }
         
         .container {
-            max-width: 700px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
+            padding: 0 1.5rem;
         }
         
-        header {
-            text-align: center;
-            padding: 2rem 0 1.5rem;
-            border-bottom: 2px solid var(--text);
-            margin-bottom: 2rem;
+        /* Navigation */
+        nav {
+            background: rgba(10, 10, 11, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
         }
         
-        .precinct-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 0.35rem 1rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 1rem;
-        }
-        
-        h1 {
-            font-size: clamp(1.75rem, 5vw, 2.5rem);
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tagline {
-            font-size: 1.125rem;
-            color: var(--muted);
-        }
-        
-        section {
-            margin-bottom: 2.5rem;
-        }
-        
-        h2 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .newsletter-box {
-            background: var(--text);
-            color: white;
-            padding: 2rem;
-            margin: 2.5rem 0;
-        }
-        
-        .newsletter-box h2 {
-            color: white;
-            margin-bottom: 0.75rem;
-        }
-        
-        .newsletter-box p {
-            color: #aaa;
-            margin-bottom: 1.25rem;
-            font-size: 0.95rem;
-        }
-        
-        .email-form {
+        .nav-content {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        
+        .nav-logo span {
+            color: var(--red);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--red);
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--bg) 0%, #1e1b4b 100%);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 70%, rgba(201, 168, 76, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
             gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .email-form input[type="email"] {
-            flex: 1;
-            min-width: 200px;
-            padding: 0.875rem 1rem;
-            border: none;
-            font-size: 1rem;
-        }
-        
-        .email-form button {
-            padding: 0.875rem 1.5rem;
-            background: var(--accent);
-            color: white;
-            border: none;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        
-        .ghost-note {
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 1rem;
             font-size: 0.75rem;
-            color: #777;
-            margin-top: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+        
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero h1 em {
+            color: var(--red);
             font-style: italic;
         }
         
-        .values-list {
-            list-style: none;
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
         }
         
-        .values-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
+        .hero-location {
+            font-size: 0.9rem;
+            color: var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
         
-        .values-list li:last-child {
-            border-bottom: none;
+        .newsletter {
+            background: var(--red);
+            padding: 3rem 0;
+            position: relative;
         }
         
-        .values-list strong {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
+        .newsletter-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
         }
         
-        .values-list span {
-            color: var(--muted);
+        @media (max-width: 768px) {
+            .newsletter-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .newsletter-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .newsletter-text p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            padding: 1rem 1.5rem;
+            background: var(--bg);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        section:nth-child(even) {
+            background: var(--bg-elevated);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .pco-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pco-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--red);
+        }
+        
+        .pco-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--gold);
+        }
+        
+        .pco-card p {
+            color: var(--text-muted);
             font-size: 0.95rem;
         }
         
+        .issues-scope {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .scope-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .scope-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .scope-card h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--red);
+            margin-bottom: 0.25rem;
+        }
+        
+        .scope-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .issues-list {
+            list-style: none;
+        }
+        
+        .issues-list li {
+            padding: 1.5rem;
+            background: var(--bg);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--red);
+        }
+        
+        .issues-list h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .issues-list p {
+            color: var(--text-muted);
+        }
+        
         .election-alert {
-            background: #fffbeb;
-            border: 1px solid #fcd34d;
-            padding: 1rem 1.25rem;
+            background: linear-gradient(135deg, #1e3a5f 0%, var(--bg-elevated) 100%);
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .election-alert h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--gold);
+        }
+        
+        .election-alert p {
+            color: var(--text-muted);
             margin-bottom: 1.5rem;
         }
         
-        .election-alert strong {
-            color: #92400e;
-        }
-        
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-links a {
-            color: var(--text);
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: var(--red);
+            color: var(--white);
             text-decoration: none;
+            border-radius: 4px;
             font-weight: 600;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 0.1rem;
+            transition: all 0.2s;
         }
         
-        .contact-links a:hover {
-            color: var(--accent);
+        .btn:hover {
+            background: var(--red-light);
+            transform: translateY(-2px);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .contact-card {
+            background: var(--bg-elevated);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .contact-card:hover {
+            border-color: var(--red);
+            transform: translateY(-4px);
+        }
+        
+        .contact-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .contact-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
         }
         
         footer {
+            background: var(--bg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 3rem 0 2rem;
             text-align: center;
-            padding-top: 2rem;
-            border-top: 2px solid var(--text);
-            color: var(--muted);
-            font-size: 0.875rem;
+        }
+        
+        .footer-republican {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--red);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
         }
         
         footer p {
-            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+            .hero { padding: 3rem 0; }
+            section { padding: 3rem 0; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="precinct-badge">Precinct 53 • Franklin County</div>
-            <h1>Gavin Rouse for PCO</h1>
-            <p class="tagline">Your neighbor. Your voice. Your precinct.</p>
-        </header>
-
-        <div class="election-alert">
-            <strong>📋 PCO Election Registration:</strong> Opens later this year. Join the Precinct 53 newsletter to stay informed about the process and how to participate in the May election.
-        </div>
-
-        <section class="newsletter-box">
-            <h2>Stay in the Loop</h2>
-            <p>Local politics isn't a spectator sport. Get updates on what's happening in Precinct 53—voter information, community events, and straight talk about the issues that affect us. No spam, no noise.</p>
-            <form class="email-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:#4ade80;margin:0\'>Thanks! Check your inbox.</p>';">
-                <input type="email" placeholder="you@example.com" required>
-                <button type="submit">Join Newsletter</button>
-            </form>
-            <p class="ghost-note">Powered by Ghost • Launching soon</p>
-        </section>
-
-        <section>
-            <h2>What's a PCO Anyway?</h2>
-            <p>A Precinct Committee Officer is your direct line to the Republican Party. I represent our neighborhood at county meetings, help get out the vote, and make sure your concerns are heard where decisions get made.</p>
-            <p>It's not about power—it's about <em>presence</em>. Having someone who lives here, knows the issues, and actually shows up.</p>
-        </section>
-
-        <section>
-            <h2>What I Care About</h2>
-            <ul class="values-list">
-                <li>
-                    <strong>Straight Talk</strong>
-                    <span>No sugarcoating. If I don't know something, I'll say so. If I disagree with party leadership, you'll know that too.</span>
-                </li>
-                <li>
-                    <strong>Local First</strong>
-                    <span>Communities work best when people know their neighbors. I'm here to help precinct residents connect and collaborate.</span>
-                </li>
-                <li>
-                    <strong>Fiscal Sanity</strong>
-                    <span>Government should live within its means. Lower taxes, smarter spending, and accountability for every dollar.</span>
-                </li>
-                <li>
-                    <strong>Personal Freedom</strong>
-                    <span>Your life, your choices. Limited government means keeping bureaucrats out of decisions that belong to families and individuals.</span>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Get in Touch</h2>
-            <p>Got a question about Precinct 53? Want to know more about the PCO role? Just want to say hi? I'm around.</p>
-            <div class="contact-links">
-                <a href="mailto:gavin@gavinrouse.com">Email</a>
-                <a href="https://t.me/gavinrouse">Telegram</a>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">Gavin <span>Rouse</span></div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#issues">Issues</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <footer>
-            <p>Paid for by Gavin Rouse • Precinct 53, Franklin County, WA</p>
-        </footer>
-    </div>
-</body>
-</html>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge">🐘 Republican Candidate</div>
+            <h1>Republican PCO<br><em>Precinct 53</em></h1>
+            <p class="hero-subtitle">Your neighbor. Your voice. Your Republican representative.</p>
+            <p class="hero-location">📍 Franklin County, Washington</p>
+        </div>
+    </header>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Join the Republican Team</h2>
+                    <p>Get updates on Precinct 53, Franklin County GOP news, state legislation affecting Eastern Washington, and national issues that matter to conservatives. No spam—just straight talk.</p>
+                </div>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:white;margin:0\'>✓ Thanks for joining!</p>';">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Republican Leadership Starts Local</h2>
+                <p>The Precinct Committee Officer is your direct connection between our neighborhood and the Republican Party. I represent conservative values from our streets to the statehouse.</p>
+            </div>
+            <div class="pco-grid">
+                <div class="pco-card">
+                    <h3>🏛️ Republican Voice</h3>
+                    <p>I represent Precinct 53 at Franklin County Republican meetings, advancing conservative principles and ensuring our neighborhood's concerns are heard.</p>
+                </div>
+                <div class="pco-card">
+                    <h3>🗳️ Election Integrity</h3>
+                    <p>Working to get out the Republican vote, support conservative candidates, and strengthen our party's presence in Franklin County.</p>
+                </div>
+                <div class="pco-card">
+                    <h3>🤝 Community Building</h3>
+                    <p>Connecting conservative neighbors, hosting Republican
