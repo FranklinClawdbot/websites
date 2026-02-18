@@ -9,407 +9,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        :root {
-            --bg: #0a0a0b;
-            --bg-elevated: #111113;
-            --bg-card: #16161a;
-            --text: #e8e6e3;
-            --text-muted: #94918a;
-            --red: #dc2626;
-            --red-dark: #991b1b;
-            --gold: #c9a84c;
-            --white: #ffffff;
-        }
-        
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        
-        /* Navigation */
-        nav {
-            background: rgba(10, 10, 11, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 1rem 0;
-        }
-        
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-        }
-        
-        .nav-logo span {
-            color: var(--red);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--red);
-        }
-        
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, var(--bg) 0%, #1e1b4b 100%);
-            padding: 5rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 30% 30%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 70%, rgba(201, 168, 76, 0.1) 0%, transparent 40%);
-            pointer-events: none;
-        }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--red);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-        }
-        
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            line-height: 1.1;
-        }
-        
-        .hero h1 em {
-            color: var(--red);
-            font-style: italic;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-        
-        .hero-location {
-            font-size: 0.9rem;
-            color: var(--gold);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        
-        .newsletter {
-            background: var(--red);
-            padding: 3rem 0;
-            position: relative;
-        }
-        
-        .newsletter-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        @media (max-width: 768px) {
-            .newsletter-content {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .newsletter-text h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .newsletter-text p {
-            opacity: 0.9;
-            font-size: 1rem;
-        }
-        
-        .newsletter-form {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .newsletter-form input {
-            flex: 1;
-            padding: 1rem 1.25rem;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        
-        .newsletter-form button {
-            padding: 1rem 1.5rem;
-            background: var(--bg);
-            color: var(--white);
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        
-        .newsletter-form button:hover {
-            transform: translateY(-2px);
-        }
-        
-        section {
-            padding: 4rem 0;
-        }
-        
-        section:nth-child(even) {
-            background: var(--bg-elevated);
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-header h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .section-header p {
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .pco-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .pco-card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--red);
-        }
-        
-        .pco-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--gold);
-        }
-        
-        .pco-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-        
-        .issues-scope {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        
-        .scope-card {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--bg);
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .scope-card .icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .scope-card h4 {
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--red);
-            margin-bottom: 0.25rem;
-        }
-        
-        .scope-card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-        
-        .issues-list {
-            list-style: none;
-        }
-        
-        .issues-list li {
-            padding: 1.5rem;
-            background: var(--bg);
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            border-left: 3px solid var(--red);
-        }
-        
-        .issues-list h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .issues-list p {
-            color: var(--text-muted);
-        }
-        
-        .election-alert {
-            background: linear-gradient(135deg, #1e3a5f 0%, var(--bg-elevated) 100%);
-            border: 2px solid var(--gold);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .election-alert h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.75rem;
-            margin-bottom: 0.75rem;
-            color: var(--gold);
-        }
-        
-        .election-alert p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.875rem 2rem;
-            background: var(--red);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        
-        .btn:hover {
-            background: var(--red-light);
-            transform: translateY(-2px);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .contact-card {
-            background: var(--bg-elevated);
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.2s;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .contact-card:hover {
-            border-color: var(--red);
-            transform: translateY(-4px);
-        }
-        
-        .contact-card .icon {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .contact-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
-        }
-        
-        .contact-card p {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-        
-        footer {
-            background: var(--bg);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding: 3rem 0 2rem;
-            text-align: center;
-        }
-        
-        .footer-republican {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--red);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-        
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-        
-        @media (max-width: 640px) {
-            .nav-links { display: none; }
-            .hero { padding: 3rem 0; }
-            section { padding: 3rem 0; }
-        }
+        :root { --bg: #0a0a0b; --bg-elevated: #111113; --bg-card: #16161a; --text: #e8e6e3; --text-muted: #94918a; --red: #dc2626; --gold: #c9a84c; --white: #ffffff; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+        nav { background: rgba(10, 10, 11, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 100; padding: 1rem 0; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--white); }
+        .nav-logo span { color: var(--red); }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--red); }
+        .hero { background: linear-gradient(135deg, var(--bg) 0%, #1e1b4b 100%); padding: 5rem 0; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 30%, rgba(220, 38, 38, 0.15) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(201, 168, 76, 0.1) 0%, transparent 40%); pointer-events: none; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--red); color: var(--white); padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; border-radius: 4px; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; margin-bottom: 0.5rem; line-height: 1.1; }
+        .hero h1 em { color: var(--red); font-style: italic; }
+        .hero-subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+        .hero-location { font-size: 0.9rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+        .newsletter { background: var(--red); padding: 3rem 0; }
+        .newsletter-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        @media (max-width: 768px) { .newsletter-content { grid-template-columns: 1fr; } }
+        .newsletter-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 0.75rem; }
+        .newsletter-text p { opacity: 0.9; font-size: 1rem; }
+        .newsletter-form { display: flex; gap: 0.5rem; }
+        .newsletter-form input { flex: 1; padding: 1rem 1.25rem; border: none; border-radius: 4px; font-size: 1rem; }
+        .newsletter-form button { padding: 1rem 1.5rem; background: var(--bg); color: var(--white); border: none; border-radius: 4px; font-weight: 600; cursor: pointer; }
+        section { padding: 4rem 0; }
+        section:nth-child(even) { background: var(--bg-elevated); }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 0.75rem; }
+        .section-header p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+        .pco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .pco-card { background: var(--bg-card); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--red); }
+        .pco-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--gold); }
+        .pco-card p { color: var(--text-muted); font-size: 0.95rem; }
+        .scope-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+        .scope-card { text-align: center; padding: 1.5rem; background: var(--bg); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); }
+        .scope-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .scope-card h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--red); margin-bottom: 0.25rem; }
+        .scope-card p { font-size: 0.8rem; color: var(--text-muted); }
+        .issues-list { list-style: none; }
+        .issues-list li { padding: 1.5rem; background: var(--bg); margin-bottom: 1rem; border-radius: 8px; border-left: 3px solid var(--red); }
+        .issues-list h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .issues-list p { color: var(--text-muted); }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .contact-card { background: var(--bg-elevated); padding: 2rem; border-radius: 8px; text-align: center; text-decoration: none; color: var(--text); border: 1px solid rgba(255,255,255,0.1); }
+        .contact-card:hover { border-color: var(--red); }
+        .contact-card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+        .contact-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; margin-bottom: 0.25rem; }
+        .contact-card p { font-size: 0.875rem; color: var(--text-muted); }
+        footer { background: var(--bg); border-top: 1px solid rgba(255,255,255,0.1); padding: 3rem 0 2rem; text-align: center; }
+        .footer-badge { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--red); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
+        footer p { color: var(--text-muted); font-size: 0.875rem; }
+        @media (max-width: 640px) { .nav-links { display: none; } .hero { padding: 3rem 0; } section { padding: 3rem 0; } }
     </style>
 </head>
 <body>
@@ -440,7 +92,7 @@
             <div class="newsletter-content">
                 <div class="newsletter-text">
                     <h2>Join the Republican Team</h2>
-                    <p>Get updates on Precinct 53, Franklin County GOP news, state legislation affecting Eastern Washington, and national issues that matter to conservatives. No spam—just straight talk.</p>
+                    <p>Get updates on Precinct 53, Franklin County GOP news, state legislation affecting Eastern Washington, and national issues that matter to conservatives.</p>
                 </div>
                 <form class="newsletter-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:white;margin:0\'>✓ Thanks for joining!</p>';">
                     <input type="email" placeholder="Enter your email" required>
@@ -454,7 +106,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Republican Leadership Starts Local</h2>
-                <p>The Precinct Committee Officer is your direct connection between our neighborhood and the Republican Party. I represent conservative values from our streets to the statehouse.</p>
+                <p>The Precinct Committee Officer is your direct connection between our neighborhood and the Republican Party.</p>
             </div>
             <div class="pco-grid">
                 <div class="pco-card">
@@ -467,4 +119,63 @@
                 </div>
                 <div class="pco-card">
                     <h3>🤝 Community Building</h3>
-                    <p>Connecting conservative neighbors, hosting Republican
+                    <p>Connecting conservative neighbors, hosting Republican events, and building the grassroots network that wins elections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="issues">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conservative Values at Every Level</h2>
+                <p>From our streets to the White House, fighting for Republican principles that protect freedom, families, and fiscal responsibility.</p>
+            </div>
+            
+            <div class="scope-grid">
+                <div class="scope-card"><div class="icon">🏘️</div><h4>Precinct 53</h4><p>Local neighborhoods</p></div>
+                <div class="scope-card"><div class="icon">🏛️</div><h4>Franklin County</h4><p>GOP operations</p></div>
+                <div class="scope-card"><div class="icon">🌲</div><h4>WA State</h4><p>Legislation</p></div>
+                <div class="scope-card"><div class="icon">🇺🇸</div><h4>National</h4><p>Federal policy</p></div>
+                <div class="scope-card"><div class="icon">🌎</div><h4>Global</h4><p>World affairs</p></div>
+            </div>
+            
+            <ul class="issues-list">
+                <li><h3>🗽 Individual Liberty</h3><p>Your life, your choices. Limited government means keeping bureaucrats out of decisions that belong to families and individuals. From vaccine mandates to property rights, I fight for freedom.</p></li>
+                <li><h3>💰 Fiscal Responsibility</h3><p>Government should live within its means. Lower taxes, smarter spending, and accountability for every dollar. Whether it's the county budget or federal debt, conservatives must lead on fiscal sanity.</p></li>
+                <li><h3>🏠 Family & Community</h3><p>Strong families build strong communities. I support policies that protect parental rights, encourage marriage, and keep government from undermining the institutions that hold society together.</p></li>
+                <li><h3>🔒 Election Integrity</h3><p>Every legal vote must count. I support voter ID, clean voter rolls, and transparent elections. The foundation of our Republic depends on trust in the electoral process.</p></li>
+                <li><h3>🎓 Education Freedom</h3><p>Parents—not bureaucrats—should control their children's education. School choice, curriculum transparency, and keeping politics out of classrooms are essential to raising the next generation of conservative leaders.</p></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have a question about Precinct 53? Want to get involved with the Franklin County GOP? Let's talk.</p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:gavin@gavinrouse.com" class="contact-card">
+                    <div class="icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>gavin@gavinrouse.com</p>
+                </a>
+                <a href="https://t.me/gavinrouse" class="contact-card">
+                    <div class="icon">💬</div>
+                    <h3>Telegram</h3>
+                    <p>@gavinrouse</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-badge">🐘 Republican PCO</div>
+            <p>Paid for by Gavin Rouse • Precinct 53, Franklin County, WA</p>
+        </div>
+    </footer>
+</body>
+</html>
