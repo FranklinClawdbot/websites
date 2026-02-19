@@ -1,6 +1,6 @@
 # Gavin Rouse — The Rouse House
 
-Personal website deployed via Cloudflare Pages.
+Personal website.
 
 ## Structure
 
@@ -10,21 +10,40 @@ gavinrouse/
 └── README.md     # This file
 ```
 
-## Deployment
+## Current Deployment
 
-- **Host:** GitHub Pages (via FranklinClawdbot/websites repo)
+- **Host:** GitHub Pages
 - **URL:** https://franklinclawdbot.github.io/websites/gavinrouse/
-- **Custom Domain:** gavinrouse.com (configured in Cloudflare)
 
-### Deployment Steps
+## End Goal: Cloudflare Pages
 
-1. Edit `index.html`
-2. Commit and push to `websites/built-site/`
-3. GitHub Pages auto-deploys
+### Setup
 
-## Current Site
+1. **Go to Cloudflare Dashboard** → Pages → Create project
+2. **Connect to GitHub** → Select `FranklinClawdbot/websites`
+3. **Configure:**
+   - Project name: `gavinrouse-com`
+   - Production branch: `master`
+   - Build command: *(empty - static site)*
+   - Build output directory: `built-site/gavinrouse`
+4. **Add Custom Domain:** gavinrouse.com
+
+### DNS (when ready)
+
+```
+Type: CNAME
+Name: @
+Target: gavinrouse-com.pages.dev
+```
+
+### Updating
+
+1. Edit `built-site/gavinrouse/index.html`
+2. Commit and push
+3. Auto-deploys
+
+## Site Info
 
 - **Tagline:** Engineer by trade. Builder by nature.
 - **Location:** Pasco, Washington
-- **Features:** Responsive design, dark theme, contact links
-- **Theme:** Cormorant Garamond + DM Sans fonts
+- **Theme:** Cormorant Garamond + DM Sans
